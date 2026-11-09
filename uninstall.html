@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dial — sorry to see you go</title><meta name="robots" content="noindex"><link rel="stylesheet" href="help.css">
+<style> .reasons { display: grid; gap: 10px; max-width: 520px; } .reasons a { display: block; } </style></head>
+<body><main>
+<h1>Sorry to see you go</h1>
+<p>Dial was uninstalled. If you have a moment, tell us why — one click is enough. Nothing is sent unless you choose to send the email.</p>
+<div class="reasons" id="reasons"></div>
+<p class="muted">Your Dial data was stored in your browser. If you used Chrome Sync, use Reset in Dial’s settings before uninstalling to remove synced copies, or reinstall Dial to get them back.</p>
+<p><a href="privacy.html">Privacy policy</a></p>
+<script>
+  // Support address, the same one shown on the Chrome Web Store listing.
+  var CONTACT = 'sakha1370@gmail.com';
+  var params = new URLSearchParams(location.search);
+  var context = 'Dial ' + (params.get('v') || '') + ' · ' + (params.get('lang') || '');
+  [
+    'It was missing a feature I need',
+    'Something did not work',
+    'It was slow or used too much memory',
+    'I prefer another new tab extension',
+    'I only wanted to try it',
+    'Something else'
+  ].forEach(function (reason) {
+    var a = document.createElement('a');
+    a.className = 'button';
+    a.textContent = reason;
+    a.href = 'mailto:' + CONTACT + '?subject=' + encodeURIComponent('Why I uninstalled Dial') +
+      '&body=' + encodeURIComponent(reason + '\n\nAnything else (optional):\n\n— ' + context);
+    document.getElementById('reasons').appendChild(a);
+  });
+</script>
+</main></body></html>
