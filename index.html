@@ -1,44 +1,112 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dial — a calm, private new tab dashboard for Chrome</title>
-<meta name="description" content="Dial turns Chrome's new tab into a calm personal dashboard: speed dial, calendar, weather, focus timer, goals and a private journal. No account, no ads, works offline.">
-<link rel="stylesheet" href="help.css">
-<style>
-  .hero { display: grid; gap: 16px; margin-bottom: 8px; }
-  .cta { display: inline-block; padding: 12px 20px; border-radius: 12px; background: #3e63dd; color: #fff; font-weight: 600; text-decoration: none; }
-  .shots { display: grid; gap: 16px; margin: 24px 0; }
-  .shots img { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 24px #0003; }
-  ul.features li { margin-bottom: 6px; }
-</style></head>
-<body><main>
-<nav><a href="privacy.html">Privacy policy</a><a href="#help">Help & feedback</a></nav>
-<section class="hero">
-  <h1>Dial — a calm, private new tab for Chrome</h1>
-  <p>Open a new tab and your favorite sites, today’s date, the weather and your focus tools are already there. No account, no ads, no tracking, and it keeps working offline.</p>
-  <!-- Replace the link below with Dial's Chrome Web Store URL once it is published. -->
-  <p><a class="cta" id="install" href="https://chromewebstore.google.com/">Add to Chrome — it’s free</a></p>
-</section>
-<div class="shots">
-  <img src="assets/en/01-dashboard.png" width="1280" height="720" alt="Dial's dashboard: speed dial, calendar, weather and a course tracker in one new tab">
-  <img src="assets/en/03-useful-time.png" width="1280" height="720" alt="Useful time: a Pomodoro timer and a chart of the time you worked">
-  <img src="assets/en/05-goals.png" width="1280" height="720" alt="Goals with a clear next step and visible progress">
-  <img src="assets/en/07-habits.png" width="1280" height="720" alt="Habits: a month table with a box for each day, and no streaks to break">
-  <img src="assets/en/06-weight.png" width="1280" height="720" alt="The optional weight tracker on the dashboard: current weight, target, progress and a chart with an estimated arrival date">
-</div>
-<p class="muted">Screenshots show example shortcuts as they appear in Dial. Site names and icons belong to their owners; Dial is not affiliated with or endorsed by any of them.</p>
-<h2>What you get</h2>
-<ul class="features">
-  <li><strong>Speed dial</strong> with folders, drag-and-drop, a / filter, keyboard control and Undo.</li>
-  <li><strong>Focus</strong>: a Pomodoro timer and stopwatch, a full-screen clock and a log of the time you actually worked.</li>
-  <li><strong>Plans</strong>: goals with a clear next step, countdowns, and a course tracker with an estimated finish date.</li>
-  <li><strong>Daily habits</strong> on a month table: one box per day and no streaks to break.</li>
-  <li><strong>Weight tracker</strong> (optional, off until you switch it on): log your weight, follow it on a chart and see an estimated date for reaching your target.</li>
-  <li><strong>Calendar and weather</strong>: Gregorian, Persian (Shamsi) and Hijri dates side by side; a 7-day forecast for the city you choose.</li>
-  <li><strong>Private journal</strong> that stays on your device.</li>
-  <li><strong>Your data is safe</strong>: automatic local backups before every update, one-click export and restore.</li>
-</ul>
-<h2>Privacy in one paragraph</h2>
-<p>Dial has no account system, server, ads or analytics. Small records sync through your own Chrome account when Chrome Sync is on; your journal, goals and time log stay on your device. Only two features talk to outside services: the weather (Open-Meteo, after you choose a city) and missing site icons (Google’s favicon service, which you can turn off). Read the full <a href="privacy.html">privacy policy</a>.</p>
-<h2 id="help">Help & feedback</h2>
-<p>Questions, bugs or ideas? Email <a href="mailto:sakha1370@gmail.com">sakha1370@gmail.com</a> or use the Support tab on Dial’s Chrome Web Store page. Lost something after an update? Open Settings → Data → Automatic backups → Restore.</p>
-</main></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tivona – Chrome New Tab Dashboard &amp; Daily Planner</title>
+  <meta name="description" content="Plan your day in every Chrome new tab. Tivona brings together website shortcuts, a to-do list, a calendar with Persian dates, and a Pomodoro timer.">
+  <link rel="canonical" href="https://sakha1370.github.io/dial/">
+  <link rel="alternate" hreflang="en" href="https://sakha1370.github.io/dial/">
+  <link rel="alternate" hreflang="fa" href="https://sakha1370.github.io/dial/fa/">
+  <link rel="alternate" hreflang="x-default" href="https://sakha1370.github.io/dial/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tivona">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Tivona – Chrome New Tab Dashboard &amp; Daily Planner">
+  <meta property="og:description" content="Open a Chrome tab to find your site shortcuts, today’s tasks, calendar, and Pomodoro timer.">
+  <meta property="og:url" content="https://sakha1370.github.io/dial/">
+  <meta property="og:image" content="https://sakha1370.github.io/dial/assets/en/dashboard.webp">
+  <meta property="og:image:alt" content="Tivona’s Chrome dashboard with shortcut tiles, a monthly calendar, and a to-do list">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="assets/tivona-icon.png">
+  <link rel="stylesheet" href="help.css">
+  <link rel="stylesheet" href="landing.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Tivona",
+    "url": "https://sakha1370.github.io/dial/",
+    "description": "A Chrome new tab dashboard with website shortcuts, a to-do list, a calendar with Persian dates, and a Pomodoro timer.",
+    "applicationCategory": "ProductivityApplication",
+    "softwareRequirements": "Google Chrome 109 or later",
+    "installUrl": "https://chromewebstore.google.com/detail/aeoijkdjmndfjkkalijcjafcmhmloemh",
+    "image": "https://sakha1370.github.io/dial/assets/en/dashboard.webp",
+    "offers": { "@type": "Offer", "price": 0, "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <nav aria-label="Site navigation">
+      <a href="#features">Features</a>
+      <a href="#help">Help</a>
+      <a href="fa/" hreflang="fa" lang="fa" dir="rtl">فارسی</a>
+    </nav>
+  </header>
+  <main id="main" class="landing" tabindex="-1">
+    <div class="hero">
+      <h1>Tivona, a new tab dashboard for Chrome</h1>
+      <p>Open a tab to reach your favorite websites, see what’s due today, and start a focus session. Tivona puts your shortcuts, to-do list, and calendar on the same page.</p>
+      <p><a class="cta" id="install" href="https://chromewebstore.google.com/detail/aeoijkdjmndfjkkalijcjafcmhmloemh?hl=en&amp;utm_source=tivona_site&amp;utm_medium=referral&amp;utm_campaign=homepage&amp;utm_content=en">Add Tivona to Chrome</a></p>
+      <p class="muted">Free for desktop Chrome. Tivona replaces your new tab page and works without a Tivona account.</p>
+      <figure class="preview">
+        <img src="assets/en/dashboard.webp" srcset="assets/en/dashboard-640.webp 640w, assets/en/dashboard.webp 1280w" sizes="(max-width: 900px) calc(100vw - 48px), 820px" width="1280" height="720" fetchpriority="high" decoding="async" alt="Tivona’s Chrome dashboard with shortcut tiles and folders, a monthly calendar, a to-do list, and a weather forecast">
+        <figcaption>Example dashboard with the optional course tracker enabled.</figcaption>
+      </figure>
+    </div>
+
+    <section aria-labelledby="features">
+      <h2 id="features">Shortcuts and tools for planning your day</h2>
+      <div class="features">
+        <div>
+          <h3>Website shortcuts and folders</h3>
+          <p>Use Speed Dial to pin your most visited sites, group them into folders, and find them with the keyboard. You can also import a folder from Chrome Bookmarks.</p>
+        </div>
+        <div>
+          <h3>To-do list and daily planning</h3>
+          <p>Add tasks with due dates, priorities, notes, and checklist steps. See what’s due today or overdue, and pick a day on the calendar to see the tasks scheduled for it.</p>
+        </div>
+        <div>
+          <h3>Persian, Gregorian, and Hijri calendars</h3>
+          <p>Use the calendar widget to switch between Shamsi (Jalali), Gregorian, and Hijri dates. Show more than one calendar together and see Iranian holidays in the Shamsi view.</p>
+        </div>
+        <div>
+          <h3>Pomodoro timer and focus time</h3>
+          <p>Set your own focus and break lengths or use the stopwatch. Start a focus session from a task and record the time you spent on it.</p>
+        </div>
+      </div>
+      <figure class="preview">
+        <img src="assets/en/calendars.webp" srcset="assets/en/calendars-640.webp 640w, assets/en/calendars.webp 1280w" sizes="(max-width: 900px) calc(100vw - 48px), 820px" width="1280" height="720" loading="lazy" decoding="async" alt="A selected day in Tivona’s calendar showing its Gregorian, Shamsi, and Hijri dates and an option to add a task">
+        <figcaption>Select a day to see its dates across calendars and add a task for that day.</figcaption>
+      </figure>
+      <p>Customize which widgets you see. You can check the weather, count down to a date, track habits or goals, follow course progress, or keep a journal.</p>
+    </section>
+
+    <section aria-labelledby="getting-started">
+      <h2 id="getting-started">Get started with your first tab</h2>
+      <ol>
+        <li>Install Tivona from the Chrome Web Store and open a new tab.</li>
+        <li>Add a favorite website to Speed Dial or add a task with a due date.</li>
+        <li>Choose your language, calendar, and visible widgets in Settings.</li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="privacy">
+      <h2 id="privacy">Offline use and privacy</h2>
+      <p>The core tools, including your calendar, tasks, journal, and timer, work offline. Opening websites and fetching weather or online shortcut icons use an internet connection.</p>
+      <p>Your tasks, journal, and focus history are stored on this device. Some settings and shortcuts can use Chrome Sync if you have it enabled. Builds configured for PostHog offer optional usage sharing that starts off. See the <a href="privacy.html">privacy policy</a> for details and controls.</p>
+    </section>
+
+    <section aria-labelledby="help">
+      <h2 id="help">Help and feedback</h2>
+      <p>To recover data after an update, open Settings → Data → Automatic backups. If you need help, email <a href="mailto:sakha1370@gmail.com">Tivona support</a> or use the support section on the <a href="https://chromewebstore.google.com/detail/aeoijkdjmndfjkkalijcjafcmhmloemh?hl=en">Chrome Web Store listing</a>.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p class="muted">Screenshots use sample data. Website names and icons belong to their owners.</p>
+    <a href="privacy.html">Privacy policy</a>
+  </footer>
+</body>
+</html>
